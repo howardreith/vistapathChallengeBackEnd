@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import http from 'http';
 import mongoose from 'mongoose';
+import createRoutes from './utils/createRoutes.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
+createRoutes(app);
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri, { });
 const { connection } = mongoose;
