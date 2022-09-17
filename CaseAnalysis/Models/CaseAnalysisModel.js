@@ -11,7 +11,7 @@ const caseAnalysisSchema = new mongoose.Schema({
   createdAt: { type: Date, required: true },
   updatedAt: { type: Date, required: true },
   status: { type: String, enum: Object.values(STATUSES), required: true },
-  caseName: { type: String, required: true },
+  caseName: { type: String, required: false },
   notes: { type: String, required: false },
   images: [{ type: imageSchema, required: false }],
 });

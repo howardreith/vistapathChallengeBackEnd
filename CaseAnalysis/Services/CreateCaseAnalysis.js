@@ -1,19 +1,12 @@
-import uploadFileToS3 from '../../utils/uploadFileToS3.js';
 import CaseAnalysisModel from '../Models/CaseAnalysisModel.js';
 import { STATUSES } from '../../utils/constants.js';
 
-export default async function createCaseAnalysis(data, files) {
-  const s3Data = await Promise.all((files.map((file) => uploadFileToS3(file))));
-  const { caseName, notes } = data;
+export default async function createCaseAnalysis() {
   const dataToSave = {
-    caseName,
-    notes,
+    caseName: '',
+    notes: '',
     status: STATUSES.INITIATED,
-    images: s3Data.map((datum) => ({
-      eTag: datum.Etag,
-      location: datum.Location,
-      key: datum.key || datum.Key,
-    })),
+    images: [],
     createdAt: new Date(),
     updatedAt: new Date(),
   };
