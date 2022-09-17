@@ -1,5 +1,4 @@
 import { clearDatabase, connectToInMemoryDb, disconnectFromInMemoryDb } from '../../utils/testHelpers.js';
-import createCaseAnalysis from './CreateCaseAnalysis.js';
 import { STATUSES } from '../../utils/constants.js';
 import CaseAnalysisModel from '../Models/CaseAnalysisModel.js';
 import getCaseAnalyses from './GetCaseAnalyses.js';
