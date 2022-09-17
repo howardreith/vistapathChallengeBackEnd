@@ -1,13 +1,13 @@
 import multer from 'multer';
-import createCaseAnalysis from '../Services/CreateCaseAnalysis.js';
+import updateCaseAnalysis from '../Services/UpdateCaseAnalysis.js';
 
 const multerUpload = multer({ dest: '/tmp' });
 
-export default function CreateCaseAnalysisController(app) {
-  app.post('/caseAnalysis/create', multerUpload.array('files'), async (req, res) => {
+export default function UpdateCaseAnalysisController(app) {
+  app.post('/caseAnalysis/update', multerUpload.array('files'), async (req, res) => {
     const { body } = req;
     const { files } = req;
-    createCaseAnalysis(body, files).then((response) => {
+    updateCaseAnalysis(body, files).then((response) => {
       res.status(200).send({
         status: 'OK',
         data: response,
