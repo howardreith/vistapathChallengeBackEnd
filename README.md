@@ -10,7 +10,7 @@ You can find instructions [here](https://www.mongodb.com/docs/manual/administrat
 like additional help, feel free to watch my video tutorial available [here](https://www.youtube.com/watch?v=2rPpG5hzZtw).
 2. Create a .env file in the root directory with the following values:
 ```
-MONGO_URI=[Your mongo URI, can be found by running "mongo" in your terminal while MongoDB runs]
+MONGO_URI=[Your mongo URI, can be found by running "mongo" in your terminal, e.g. mongodb://127.0.0.1:27017]
 FRONT_END_URL="http://localhost:3000"
 AWS_BUCKET_NAME="vistapathchallenge"
 AWS_ACCESS_KEY_ID=[I should have emailed this to you. Ask if you do not have it]
