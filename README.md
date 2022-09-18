@@ -26,4 +26,4 @@ If your front end is running on a port other than 3000, make sure to update your
 
 ## Instructions for testing
 
-1. After install dependencies, run tests with `yarn test` or `npm run test`.
+1. After installing dependencies, run tests with `yarn test` or `npm run test`.
